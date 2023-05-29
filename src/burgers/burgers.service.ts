@@ -19,8 +19,8 @@ export class BurgersService {
     return await this.burgersModule.find().exec();
   }
 
-  findOne(id: string) {
-    return this.burgersModule.findById(id).exec();
+  async findOne(id: string) {
+    return await this.burgersModule.findById(id).exec();
   }
 
   async update(id: string, updateBurgerDto: UpdateBurgerDto) {
