@@ -9,7 +9,7 @@ import { BurgersModule } from './burgers/burgers.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: ['.development.env', '.env'],
+      envFilePath: '.env',
     }),
     MongooseModule.forRoot(process.env.MONGO_DB_URI),
     BurgersModule,
