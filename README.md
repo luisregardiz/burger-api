@@ -1,4 +1,4 @@
-# Burger Api
+# Burger API
 ------------
 
 This is a sample project for a burger app built with NestJS and MongoDB. The app allows users to browse different types. This an online REST API that you can use whenever you need Pseudo-real data for your app without running any server-side code. It's awesome for teaching purposes, sample codes, tests and etc.
