@@ -50,7 +50,7 @@ This is a sample project for a burger app built with NestJS and MongoDB. The
 -------------
 
 The API provides the following endpoints:
-
+-   `GET /api`: Retrieves the Swagger documentation for this API.
 -   `GET /burgers`: Get a list of all burgers
 -   `GET /burgers/:id`: Get a single burger by ID
 -   `POST /burgers`: Add a burger to the list
