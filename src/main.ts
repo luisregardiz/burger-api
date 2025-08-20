@@ -5,11 +5,21 @@ import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
+  // Enable CORS for specific origins
+  app.enableCors({
+    origin: ['http://localhost:5173', 'http://localhost:3000'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    credentials: true,
+  });
+
   const config = new DocumentBuilder()
     .setTitle('Burger API')
     .setDescription('This is a Burger API to test your app')
     .setVersion('1.0')
     .addTag('burgers')
+    .addTag('auth')
+    .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
