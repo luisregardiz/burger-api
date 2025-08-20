@@ -24,7 +24,10 @@ export class BurgersController {
   @UseFilters(ValidationFilter)
   async create(@Body() createBurgerDto: CreateBurgerDto) {
     const newBurger = await this.burgersService.create(createBurgerDto);
-    return newBurger;
+    return {
+      message: 'Burger created successfully',
+      data: newBurger,
+    };
   }
 
   @Get()
